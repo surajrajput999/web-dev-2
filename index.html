@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2: Web Development Internship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ApexIntern</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#todo-section">To-Do List</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-grid">
+
+        <section id="todo-section" class="card">
+            <div class="header-row">
+                <h2>Dynamic To-Do List</h2>
+                <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Add a new task..." onkeypress="handleEnter(event)">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <ul id="taskList">
+            </ul>
+        </section>
+
+        <section id="contact-section" class="card">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <small id="nameError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <small id="emailError" class="error"></small>
+                </div>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

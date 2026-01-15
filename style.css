@@ -1,0 +1,246 @@
+/* =========================================
+   1. Reset and Base Styles
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #eef2f3;
+    color: #333;
+}
+
+/* =========================================
+   2. Navigation Bar
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Dark Blue Background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Links Container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Button Styling (Fixed for Visibility) */
+.nav-links a {
+    text-decoration: none;
+    background-color: #ffffff; /* White Button Background */
+    color: #2c3e50; /* Dark Text (Visible on White) */
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #3498db; /* Blue Background */
+    color: #ffffff; /* White Text */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   3. Main Layout (CSS Grid)
+   ========================================= */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    padding-bottom: 5px;
+}
+
+/* =========================================
+   4. Contact Form Styling
+   ========================================= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* General Button Styling */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Error Message */
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* =========================================
+   5. To-Do List Styling
+   ========================================= */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.header-row h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    flex-grow: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+/* Completed Task Style (Strikethrough) */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #e9ecef;
+}
+
+li span {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Clear All Button */
+.clear-btn {
+    background-color: #e74c3c;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.clear-btn:hover {
+    background-color: #c0392b;
+}
+
+/* =========================================
+   6. Responsiveness (Mobile View)
+   ========================================= */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+}
